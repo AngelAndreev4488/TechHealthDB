@@ -1,0 +1,22 @@
+# HealthMetricsArchive Table
+
+## Purpose
+The `HealthMetricsArchive` table stores historical health data for users, older than 2 years. It supports long-term analysis and compliance with data retention policies.
+
+## Structure
+- `archive_id`: Primary key with identity and positive check constraint
+- `record_id`: Foreign key to `HealthMetrics`
+- `user_id`: Foreign key to `Customers`
+- `month_date`: Must be older than 2 years
+- `avg_heart_rate`, `avg_daily_steps`, `avg_sleep_hours`: All must be non-negative
+
+## Constraints
+- `CHECK` constraints enforce data validity
+- `FOREIGN KEY` constraints ensure referential integrity with `HealthMetrics` and `Customers`
+
+## Indexing Strategy
+- `IDX_HealthMetricsArchive_user_id`: Optimizes queries by user
+- `IDX_HealthMetricsArchive_month_date`: Speeds up date-based filtering
+
+## Notes
+This table is designed for archiving, not real-time analytics. It complements the main `HealthMetrics` table and supports partitioning and performance tuning in future iterations.
