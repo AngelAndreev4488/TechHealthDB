@@ -71,3 +71,4 @@ FROM ActiveDeviceStats ads
 JOIN HighStressUsers hsu ON hsu.user_id = ads.user_id;
 GO
 
+
