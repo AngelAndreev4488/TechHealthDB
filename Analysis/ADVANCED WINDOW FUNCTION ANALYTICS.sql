@@ -2,7 +2,6 @@
 GO
 
 /* =====================================================================
-   MID‑LEVEL SQL DEVELOPER TASK
    ADVANCED WINDOW FUNCTION ANALYTICS — TECHHEALTHDB PROJECT
    =====================================================================
 
@@ -68,22 +67,7 @@ GO
 
    8. ORDERING:
       Final result must be ordered by:
-      user_id, date ASC
-
-   =====================================================================
-   WHAT THIS TASK TESTS (MID‑LEVEL SKILLS)
-   =====================================================================
-   ✔ Ability to use aggregate window functions
-   ✔ Ability to use ranking and row-numbering functions
-   ✔ Ability to use LAG/LEAD and FIRST_VALUE/LAST_VALUE
-   ✔ Ability to define custom window frames
-   ✔ Ability to combine multiple analytic functions in one query
-   ✔ Ability to produce clean, readable, well-structured SQL
-
-   =====================================================================
-   END OF TASK DESCRIPTION
-   ===================================================================== */
-
+      user_id, date ASC*/
 
 
 SELECT user_id, 
